@@ -12,6 +12,8 @@
 		8B46C00D214206B6009C500E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C00B214206B6009C500E /* Main.storyboard */; };
 		8B46C00F214206B7009C500E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C00E214206B7009C500E /* Assets.xcassets */; };
 		8B46C012214206B7009C500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C010214206B7009C500E /* LaunchScreen.storyboard */; };
+		8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01A21420887009C500E /* ShimmeringLayer.swift */; };
+		8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01C21420893009C500E /* ShimmeringView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8B46C00E214206B7009C500E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B46C011214206B7009C500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B46C013214206B7009C500E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B46C01A21420887009C500E /* ShimmeringLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringLayer.swift; sourceTree = "<group>"; };
+		8B46C01C21420893009C500E /* ShimmeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +42,8 @@
 		8B46BFFB214206B6009C500E = {
 			isa = PBXGroup;
 			children = (
-				8B46C006214206B6009C500E /* FBShimmerSwift */,
+				8B46C0192142086A009C500E /* FBShimmer */,
+				8B46C006214206B6009C500E /* FBShimmerSwift-Demo */,
 				8B46C005214206B6009C500E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,7 +56,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B46C006214206B6009C500E /* FBShimmerSwift */ = {
+		8B46C006214206B6009C500E /* FBShimmerSwift-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				8B46C007214206B6009C500E /* AppDelegate.swift */,
@@ -61,7 +66,16 @@
 				8B46C010214206B7009C500E /* LaunchScreen.storyboard */,
 				8B46C013214206B7009C500E /* Info.plist */,
 			);
-			path = FBShimmerSwift;
+			path = "FBShimmerSwift-Demo";
+			sourceTree = "<group>";
+		};
+		8B46C0192142086A009C500E /* FBShimmer */ = {
+			isa = PBXGroup;
+			children = (
+				8B46C01A21420887009C500E /* ShimmeringLayer.swift */,
+				8B46C01C21420893009C500E /* ShimmeringView.swift */,
+			);
+			path = FBShimmer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B46C00A214206B6009C500E /* ViewController.swift in Sources */,
+				8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */,
 				8B46C008214206B6009C500E /* AppDelegate.swift in Sources */,
+				8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +300,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RCFBK97QU7;
-				INFOPLIST_FILE = FBShimmerSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FBShimmerSwift-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nouvelle.FBShimmerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.FBShimmerSwift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,15 +318,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RCFBK97QU7;
-				INFOPLIST_FILE = FBShimmerSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FBShimmerSwift-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nouvelle.FBShimmerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.FBShimmerSwift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
