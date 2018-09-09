@@ -14,6 +14,8 @@
 		8B46C012214206B7009C500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C010214206B7009C500E /* LaunchScreen.storyboard */; };
 		8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01A21420887009C500E /* ShimmeringLayer.swift */; };
 		8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01C21420893009C500E /* ShimmeringView.swift */; };
+		8BC7943F2144D304000A00AF /* ShimmeringMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7943E2144D304000A00AF /* ShimmeringMaskLayer.swift */; };
+		8BC794412144D3DA000A00AF /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC794402144D3DA000A00AF /* Shimmer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8B46C013214206B7009C500E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B46C01A21420887009C500E /* ShimmeringLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringLayer.swift; sourceTree = "<group>"; };
 		8B46C01C21420893009C500E /* ShimmeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringView.swift; sourceTree = "<group>"; };
+		8BC7943E2144D304000A00AF /* ShimmeringMaskLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringMaskLayer.swift; sourceTree = "<group>"; };
+		8BC794402144D3DA000A00AF /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			children = (
 				8B46C01A21420887009C500E /* ShimmeringLayer.swift */,
 				8B46C01C21420893009C500E /* ShimmeringView.swift */,
+				8BC7943E2144D304000A00AF /* ShimmeringMaskLayer.swift */,
+				8BC794402144D3DA000A00AF /* Shimmer.swift */,
 			);
 			path = Shimmer;
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B46C00A214206B6009C500E /* ViewController.swift in Sources */,
+				8BC794412144D3DA000A00AF /* Shimmer.swift in Sources */,
 				8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */,
 				8B46C008214206B6009C500E /* AppDelegate.swift in Sources */,
+				8BC7943F2144D304000A00AF /* ShimmeringMaskLayer.swift in Sources */,
 				8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

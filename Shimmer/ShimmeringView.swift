@@ -3,6 +3,7 @@
 //  ShimmerSwift
 //
 //  MIT License
+//
 //  Created by Beau Nouvelle on 7/9/18.
 //  Copyright (c) 2018 Beau Nouvelle
 //
@@ -24,7 +25,7 @@
 import Foundation
 import UIKit
 
-class ShimmeringView: UIView {
+final class ShimmeringView: UIView {
 
     /// The content view to be shimmered
     let contentView = UIView()
