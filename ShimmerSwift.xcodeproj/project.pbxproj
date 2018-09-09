@@ -42,8 +42,8 @@
 		8B46BFFB214206B6009C500E = {
 			isa = PBXGroup;
 			children = (
-				8B46C0192142086A009C500E /* FBShimmer */,
-				8B46C006214206B6009C500E /* FBShimmerSwift-Demo */,
+				8B46C0192142086A009C500E /* Shimmer */,
+				8B46C006214206B6009C500E /* ShimmerSwift-Demo */,
 				8B46C005214206B6009C500E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,7 +56,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B46C006214206B6009C500E /* FBShimmerSwift-Demo */ = {
+		8B46C006214206B6009C500E /* ShimmerSwift-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				8B46C007214206B6009C500E /* AppDelegate.swift */,
@@ -66,16 +66,16 @@
 				8B46C010214206B7009C500E /* LaunchScreen.storyboard */,
 				8B46C013214206B7009C500E /* Info.plist */,
 			);
-			path = "FBShimmerSwift-Demo";
+			path = "ShimmerSwift-Demo";
 			sourceTree = "<group>";
 		};
-		8B46C0192142086A009C500E /* FBShimmer */ = {
+		8B46C0192142086A009C500E /* Shimmer */ = {
 			isa = PBXGroup;
 			children = (
 				8B46C01A21420887009C500E /* ShimmeringLayer.swift */,
 				8B46C01C21420893009C500E /* ShimmeringView.swift */,
 			);
-			path = FBShimmer;
+			path = Shimmer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B46BFFF214206B6009C500E /* Build configuration list for PBXProject "FBShimmerSwift" */;
+			buildConfigurationList = 8B46BFFF214206B6009C500E /* Build configuration list for PBXProject "ShimmerSwift" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,7 +305,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.FBShimmerSwift-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.ShimmerSwift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -323,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.FBShimmerSwift-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "nouvelle.ShimmerSwift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -333,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B46BFFF214206B6009C500E /* Build configuration list for PBXProject "FBShimmerSwift" */ = {
+		8B46BFFF214206B6009C500E /* Build configuration list for PBXProject "ShimmerSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B46C014214206B7009C500E /* Debug */,

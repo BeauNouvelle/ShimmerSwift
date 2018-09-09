@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FBShimmerSwift.xcodeproj">
+      location = "self:/Users/beau/Developer/Beau/FBShimmerSwift/ShimmerSwift.xcodeproj">
    </FileRef>
 </Workspace>

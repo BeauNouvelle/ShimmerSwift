@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  FBShimmerSwift
+//  ShimmerSwift
 //
 //  Created by Beau Nouvelle on 7/9/18.
 //  Copyright © 2018 nouvelle. All rights reserved.
