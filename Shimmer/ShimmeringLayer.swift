@@ -36,53 +36,40 @@ import UIKit
 
 final class ShimmeringLayer: CALayer {
 
-    /// Set to `true` to start shimmer animation, and `false` to stop. Detaults to `false`.
     public var isShimmering: Bool = false {
         didSet { if oldValue != isShimmering { updateShimmering() } }
     }
 
-    /// The speed of the shimmer animation in points per second. Defaults to 230.
     public var shimmerSpeed: CGFloat = 230.0 {
         didSet { if oldValue != shimmerSpeed { updateShimmering() } }
     }
 
-    /// The highlight length of the shimmer. Range of [0,1], defaults to 1.0.
     public var shimmerHighlightLength: CGFloat = 1.0 {
         didSet { if oldValue != shimmerHighlightLength { updateShimmering() } }
     }
 
-    /// The direction of the shimmer animation. Detaults to `.right`.
     public var shimmerDirection: Shimmer.Direction = .right {
         didSet { if oldValue != shimmerDirection { updateShimmering() } }
     }
 
-    /// The time interval between shimmers in seconds. Defaults to 0.4.
     public var shimmerPauseDuration: CFTimeInterval = 0.4 {
         didSet { if oldValue != shimmerPauseDuration { updateShimmering() } }
     }
 
-    /// The opacity of the content during a shimmer. Defaults to 0.5.
     public var shimmerAnimationOpacity: CGFloat = 0.5 {
         didSet { if oldValue != shimmerAnimationOpacity { updateMaskColors() } }
     }
 
-    /// The opacity of the content when not shimmering. Defaults to 1.0.
     public var shimmerOpacity: CGFloat = 1.0 {
         didSet { if oldValue != shimmerOpacity { updateMaskColors() } }
     }
 
-    /// The absolute CoreAnimation media time when the shimmer will begin.
     public var shimmerBeginTime: CFTimeInterval = .greatestFiniteMagnitude {
         didSet { if oldValue != shimmerBeginTime { updateShimmering() } }
     }
 
-    /// The duration of the fade used when the shimmer begins. Defaults to 0.1.
     public var shimmerBeginFadeDuration: CFTimeInterval = 0.1
-
-    /// The duration of the fade used when the shiimer ends. Defaults to 0.3.
     public var shimmerEndFadeDuration: CFTimeInterval = 0.3
-
-    /// The absolute CoreAnimation media time when teh shimmer will fade in.
     public var shimmerFadeTime: CFTimeInterval?
     private let shimmerDefaultBeginTime: CFTimeInterval = .greatestFiniteMagnitude
 

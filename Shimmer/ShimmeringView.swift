@@ -53,7 +53,8 @@ final class ShimmeringView: UIView {
         didSet { shimmerLayer?.isShimmering = isShimmering }
     }
 
-    /// The speed of the shimmer animation in points per second. Defaults to 230.
+    /// The speed of the shimmer animation in points per second. The higher the number, the faster the animation.
+    /// Defaults to 230.
     public var shimmerSpeed: CGFloat = 230.0 {
         didSet { shimmerLayer?.shimmerSpeed = shimmerSpeed }
     }

@@ -23,9 +23,12 @@ class ViewController: UIViewController {
         let label = UILabel(frame: shimmerView.bounds)
         label.text = "This is my shimmering text"
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 50)
         shimmerView.contentView = label
         shimmerView.isShimmering = true
+        shimmerView.shimmerSpeed = 400
+        shimmerView.shimmerPauseDuration = 0.0
     }
 
 }
