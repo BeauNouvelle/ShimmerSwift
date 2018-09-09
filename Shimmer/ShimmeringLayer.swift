@@ -76,12 +76,21 @@ final class ShimmeringLayer: CALayer {
         didSet { if oldValue != shimmerBeginTime { updateShimmering() } }
     }
 
+    /// The duration of the fade used when the shimmer begins. Defaults to 0.1.
     public var shimmerBeginFadeDuration: CFTimeInterval = 0.1
+
+    /// The duration of the fade used when the shiimer ends. Defaults to 0.3.
     public var shimmerEndFadeDuration: CFTimeInterval = 0.3
+
+    /// The absolute CoreAnimation media time when teh shimmer will fade in.
     public var shimmerFadeTime: CFTimeInterval?
     private let shimmerDefaultBeginTime: CFTimeInterval = .greatestFiniteMagnitude
 
-    public var maskLayer: ShimmeringMaskLayer?
+    private var maskLayer: ShimmeringMaskLayer?
+
+    override init() {
+        super.init()
+    }
 
     override func layoutSublayers() {
         super.layoutSublayers()
@@ -136,7 +145,7 @@ final class ShimmeringLayer: CALayer {
         }
     }
 
-    private func updateMaskColors() {
+    func updateMaskColors() {
         guard maskLayer != nil else { return }
         let maskedColor = UIColor(white: 1.0, alpha: shimmerOpacity)
         let unmaskedColor = UIColor(white: 1.0, alpha: shimmerAnimationOpacity)
@@ -181,7 +190,7 @@ final class ShimmeringLayer: CALayer {
         }
     }
 
-    private func updateShimmering() {
+    func updateShimmering() {
         createMaskIfNeeded()
         guard let maskLayer = maskLayer, isShimmering == true else { return }
         layoutIfNeeded()

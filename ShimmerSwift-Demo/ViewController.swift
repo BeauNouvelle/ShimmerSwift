@@ -13,8 +13,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setupSubviews()
     }
 
+    func setupSubviews() {
+        let shimmerView = ShimmeringView(frame: self.view.bounds)
+        self.view.addSubview(shimmerView)
+
+        let label = UILabel(frame: shimmerView.bounds)
+        label.text = "This is my shimmering text"
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 50)
+        shimmerView.contentView = label
+        shimmerView.isShimmering = true
+    }
 
 }
 
