@@ -62,7 +62,7 @@ Defaults to `230`.
    
 ##### shimmerHighlightLength
 
-The highlight length of the shimmer. Range of [0,1], defaults to 1.0.
+The highlight length of the shimmer. Range of [0,1], defaults to `1.0`.
 
     shimmerHighlightLength: CGFloat
     
@@ -87,7 +87,7 @@ Defaults to 0.4.
 
 ##### shimmerAnimationOpacity
 
-The opacity of the content during a shimmer. Defaults to 0.5.
+The opacity of the content during a shimmer. Defaults to `0.5`.
 
     shimmerAnimationOpacity: CGFloat
     
@@ -95,7 +95,7 @@ The opacity of the content during a shimmer. Defaults to 0.5.
 
 ##### shimmerOpacity
 
-The opacity of the content when not shimmering. Defaults to 1.0.
+The opacity of the content when not shimmering. Defaults to `1.0`.
     
     shimmerOpacity: CGFloat
     
@@ -103,7 +103,7 @@ The opacity of the content when not shimmering. Defaults to 1.0.
 
 ##### shimmerBeginFadeDuration
 
-The duration of the fade used when the shimmer begins. Defaults to 0.1.
+The duration of the fade used when the shimmer begins. Defaults to `0.1`.
 
     shimmerBeginFadeDuration: CFTimeInterval
     
@@ -111,6 +111,6 @@ The duration of the fade used when the shimmer begins. Defaults to 0.1.
 
 ##### shimmerEndFadeDuration
 
-The duration of the fade used when the shimmer ends. Defaults to 0.3.
+The duration of the fade used when the shimmer ends. Defaults to `0.3`.
 
     shimmerEndFadeDuration: CFTimeInterval
