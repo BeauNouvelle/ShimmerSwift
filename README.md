@@ -1,6 +1,6 @@
 # ShimmerSwift
 A swift implementation of Facebooks shimmer effect.
-
+![demo](demo.gif)
 
 ## Installation
 
