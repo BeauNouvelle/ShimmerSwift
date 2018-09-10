@@ -7,19 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B10C40A214613EE00F73D54 /* ShimmerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B10C408214613EE00F73D54 /* ShimmerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B10C40D214613EE00F73D54 /* ShimmerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B10C406214613ED00F73D54 /* ShimmerSwift.framework */; };
+		8B10C40E214613EE00F73D54 /* ShimmerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B10C406214613ED00F73D54 /* ShimmerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B10C4132146152F00F73D54 /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01A21420887009C500E /* ShimmeringLayer.swift */; };
+		8B10C4142146152F00F73D54 /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01C21420893009C500E /* ShimmeringView.swift */; };
+		8B10C4152146152F00F73D54 /* ShimmeringMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7943E2144D304000A00AF /* ShimmeringMaskLayer.swift */; };
+		8B10C4162146152F00F73D54 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC794402144D3DA000A00AF /* Shimmer.swift */; };
 		8B46C008214206B6009C500E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C007214206B6009C500E /* AppDelegate.swift */; };
 		8B46C00A214206B6009C500E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C009214206B6009C500E /* ViewController.swift */; };
 		8B46C00D214206B6009C500E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C00B214206B6009C500E /* Main.storyboard */; };
 		8B46C00F214206B7009C500E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C00E214206B7009C500E /* Assets.xcassets */; };
 		8B46C012214206B7009C500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B46C010214206B7009C500E /* LaunchScreen.storyboard */; };
-		8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01A21420887009C500E /* ShimmeringLayer.swift */; };
-		8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46C01C21420893009C500E /* ShimmeringView.swift */; };
-		8BC7943F2144D304000A00AF /* ShimmeringMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7943E2144D304000A00AF /* ShimmeringMaskLayer.swift */; };
-		8BC794412144D3DA000A00AF /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC794402144D3DA000A00AF /* Shimmer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8B10C40B214613EE00F73D54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B46BFFC214206B6009C500E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B10C405214613ED00F73D54;
+			remoteInfo = ShimmerSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B10C412214613EE00F73D54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B10C40E214613EE00F73D54 /* ShimmerSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8B46C004214206B6009C500E /* FBShimmerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBShimmerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10C406214613ED00F73D54 /* ShimmerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShimmerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B10C408214613EE00F73D54 /* ShimmerSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShimmerSwift.h; sourceTree = "<group>"; };
+		8B10C409214613EE00F73D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B46C004214206B6009C500E /* ShimmerSwift-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShimmerSwift-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B46C007214206B6009C500E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B46C009214206B6009C500E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B46C00C214206B6009C500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,21 +63,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8B46C001214206B6009C500E /* Frameworks */ = {
+		8B10C403214613ED00F73D54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B46C001214206B6009C500E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B10C40D214613EE00F73D54 /* ShimmerSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B10C407214613ED00F73D54 /* ShimmerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				8B10C408214613EE00F73D54 /* ShimmerSwift.h */,
+				8B10C409214613EE00F73D54 /* Info.plist */,
+			);
+			path = ShimmerSwift;
+			sourceTree = "<group>";
+		};
 		8B46BFFB214206B6009C500E = {
 			isa = PBXGroup;
 			children = (
 				8B46C0192142086A009C500E /* Shimmer */,
 				8B46C006214206B6009C500E /* ShimmerSwift-Demo */,
+				8B10C407214613ED00F73D54 /* ShimmerSwift */,
 				8B46C005214206B6009C500E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,7 +103,8 @@
 		8B46C005214206B6009C500E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B46C004214206B6009C500E /* FBShimmerSwift.app */,
+				8B46C004214206B6009C500E /* ShimmerSwift-Demo.app */,
+				8B10C406214613ED00F73D54 /* ShimmerSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,22 +135,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8B10C401214613ED00F73D54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B10C40A214613EE00F73D54 /* ShimmerSwift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		8B46C003214206B6009C500E /* FBShimmerSwift */ = {
+		8B10C405214613ED00F73D54 /* ShimmerSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B46C016214206B7009C500E /* Build configuration list for PBXNativeTarget "FBShimmerSwift" */;
+			buildConfigurationList = 8B10C40F214613EE00F73D54 /* Build configuration list for PBXNativeTarget "ShimmerSwift" */;
 			buildPhases = (
-				8B46C000214206B6009C500E /* Sources */,
-				8B46C001214206B6009C500E /* Frameworks */,
-				8B46C002214206B6009C500E /* Resources */,
+				8B10C401214613ED00F73D54 /* Headers */,
+				8B10C402214613ED00F73D54 /* Sources */,
+				8B10C403214613ED00F73D54 /* Frameworks */,
+				8B10C404214613ED00F73D54 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FBShimmerSwift;
+			name = ShimmerSwift;
+			productName = ShimmerSwift;
+			productReference = 8B10C406214613ED00F73D54 /* ShimmerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B46C003214206B6009C500E /* ShimmerSwift-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B46C016214206B7009C500E /* Build configuration list for PBXNativeTarget "ShimmerSwift-Demo" */;
+			buildPhases = (
+				8B46C000214206B6009C500E /* Sources */,
+				8B46C001214206B6009C500E /* Frameworks */,
+				8B46C002214206B6009C500E /* Resources */,
+				8B10C412214613EE00F73D54 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B10C40C214613EE00F73D54 /* PBXTargetDependency */,
+			);
+			name = "ShimmerSwift-Demo";
 			productName = FBShimmerSwift;
-			productReference = 8B46C004214206B6009C500E /* FBShimmerSwift.app */;
+			productReference = 8B46C004214206B6009C500E /* ShimmerSwift-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,6 +194,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = nouvelle;
 				TargetAttributes = {
+					8B10C405214613ED00F73D54 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					8B46C003214206B6009C500E = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -132,12 +215,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B46C003214206B6009C500E /* FBShimmerSwift */,
+				8B46C003214206B6009C500E /* ShimmerSwift-Demo */,
+				8B10C405214613ED00F73D54 /* ShimmerSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B10C404214613ED00F73D54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B46C002214206B6009C500E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,20 +242,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B10C402214613ED00F73D54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B10C4132146152F00F73D54 /* ShimmeringLayer.swift in Sources */,
+				8B10C4162146152F00F73D54 /* Shimmer.swift in Sources */,
+				8B10C4142146152F00F73D54 /* ShimmeringView.swift in Sources */,
+				8B10C4152146152F00F73D54 /* ShimmeringMaskLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B46C000214206B6009C500E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8B46C00A214206B6009C500E /* ViewController.swift in Sources */,
-				8BC794412144D3DA000A00AF /* Shimmer.swift in Sources */,
-				8B46C01B21420887009C500E /* ShimmeringLayer.swift in Sources */,
 				8B46C008214206B6009C500E /* AppDelegate.swift in Sources */,
-				8BC7943F2144D304000A00AF /* ShimmeringMaskLayer.swift in Sources */,
-				8B46C01D21420893009C500E /* ShimmeringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B10C40C214613EE00F73D54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B10C405214613ED00F73D54 /* ShimmerSwift */;
+			targetProxy = 8B10C40B214613EE00F73D54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B46C00B214206B6009C500E /* Main.storyboard */ = {
@@ -186,6 +292,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8B10C410214613EE00F73D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShimmerSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nouvelle.ShimmerSwift;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B10C411214613EE00F73D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShimmerSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nouvelle.ShimmerSwift;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8B46C014214206B7009C500E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,9 +469,10 @@
 		8B46C017214206B7009C500E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RCFBK97QU7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ShimmerSwift-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,9 +488,10 @@
 		8B46C018214206B7009C500E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RCFBK97QU7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ShimmerSwift-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,6 +507,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B10C40F214613EE00F73D54 /* Build configuration list for PBXNativeTarget "ShimmerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B10C410214613EE00F73D54 /* Debug */,
+				8B10C411214613EE00F73D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B46BFFF214206B6009C500E /* Build configuration list for PBXProject "ShimmerSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -350,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B46C016214206B7009C500E /* Build configuration list for PBXNativeTarget "FBShimmerSwift" */ = {
+		8B46C016214206B7009C500E /* Build configuration list for PBXNativeTarget "ShimmerSwift-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B46C017214206B7009C500E /* Debug */,

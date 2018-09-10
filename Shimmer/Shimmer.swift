@@ -33,18 +33,20 @@ import Foundation
 import QuartzCore
 import UIKit
 
-final class Shimmer {
+final public class Shimmer {
 
-    enum Direction {
+    public enum Direction {
         case right
         case left
         case up
         case down
     }
-    
-    static let slideAnimationKey = "slide"
-    static let fadeAnimationKey = "fade"
-    static let endFadeAnimationKey = "fade-end"
+
+    struct Key {
+        static let slideAnimation = "slide"
+        static let fadeAnimation = "fade"
+        static let endFadeAnimation = "fade-end"
+    }
 
     static func fadeAnimation(layer: CALayer, opacity: CGFloat, duration: CFTimeInterval) -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: "opacity")

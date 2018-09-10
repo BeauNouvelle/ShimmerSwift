@@ -34,43 +34,60 @@ import Foundation
 import QuartzCore
 import UIKit
 
-final class ShimmeringLayer: CALayer {
+final public class ShimmeringLayer: CALayer {
 
+    /// Set to `true` to start shimmer animation, and `false` to stop. Detaults to `false`.
     public var isShimmering: Bool = false {
         didSet { if oldValue != isShimmering { updateShimmering() } }
     }
 
+    /// The speed of the shimmer animation in points per second. The higher the number, the faster the animation.
+    /// Defaults to 230.
     public var shimmerSpeed: CGFloat = 230.0 {
         didSet { if oldValue != shimmerSpeed { updateShimmering() } }
     }
 
+    /// The highlight length of the shimmer. Range of [0,1], defaults to 1.0.
     public var shimmerHighlightLength: CGFloat = 1.0 {
         didSet { if oldValue != shimmerHighlightLength { updateShimmering() } }
     }
 
+    /// The direction of the shimmer animation.
+    /// Defaults to `.right`, which will run the animation from left to right.
     public var shimmerDirection: Shimmer.Direction = .right {
         didSet { if oldValue != shimmerDirection { updateShimmering() } }
     }
 
+    /// The time interval between shimmers in seconds.
+    /// Defaults to 0.4.
     public var shimmerPauseDuration: CFTimeInterval = 0.4 {
         didSet { if oldValue != shimmerPauseDuration { updateShimmering() } }
     }
 
+    /// The opacity of the content during a shimmer. Defaults to 0.5.
     public var shimmerAnimationOpacity: CGFloat = 0.5 {
         didSet { if oldValue != shimmerAnimationOpacity { updateMaskColors() } }
     }
 
+    /// The opacity of the content when not shimmering. Defaults to 1.0.
     public var shimmerOpacity: CGFloat = 1.0 {
         didSet { if oldValue != shimmerOpacity { updateMaskColors() } }
     }
 
+    /// The absolute CoreAnimation media time when the shimmer will begin.
     public var shimmerBeginTime: CFTimeInterval = .greatestFiniteMagnitude {
         didSet { if oldValue != shimmerBeginTime { updateShimmering() } }
     }
 
+    /// The duration of the fade used when the shimmer begins. Defaults to 0.1.
     public var shimmerBeginFadeDuration: CFTimeInterval = 0.1
+
+    /// The duration of the fade used when the shimmer ends. Defaults to 0.3.
     public var shimmerEndFadeDuration: CFTimeInterval = 0.3
+
+    /// The absolute CoreAnimation media time when the shimmer will fade in.
     public var shimmerFadeTime: CFTimeInterval?
+
     private let shimmerDefaultBeginTime: CFTimeInterval = .greatestFiniteMagnitude
 
     private var maskLayer: ShimmeringMaskLayer?
@@ -79,7 +96,7 @@ final class ShimmeringLayer: CALayer {
         super.init()
     }
 
-    override func layoutSublayers() {
+    override public func layoutSublayers() {
         super.layoutSublayers()
         let rect = self.bounds
         contentLayer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -103,7 +120,7 @@ final class ShimmeringLayer: CALayer {
         }
     }
 
-    override var bounds: CGRect {
+    override public var bounds: CGRect {
         didSet {
             if oldValue.equalTo(bounds) {
                 updateShimmering()
@@ -189,7 +206,7 @@ final class ShimmeringLayer: CALayer {
             } else {
 
                 var slideEndTime: CFTimeInterval = 0
-                if let slideAnimation = maskLayer.animation(forKey: Shimmer.slideAnimationKey) {
+                if let slideAnimation = maskLayer.animation(forKey: Shimmer.Key.slideAnimation) {
                     let now = CACurrentMediaTime()
                     let slideTotalDuration = now - slideAnimation.beginTime
                     let slideTimeOffset = fmod(slideTotalDuration, slideAnimation.duration)
@@ -197,22 +214,28 @@ final class ShimmeringLayer: CALayer {
 
                     finishAnimation.beginTime = now - slideTimeOffset
                     slideEndTime = finishAnimation.beginTime + slideAnimation.duration
-                    maskLayer.add(finishAnimation, forKey: Shimmer.slideAnimationKey)
+                    maskLayer.add(finishAnimation, forKey: Shimmer.Key.slideAnimation)
                 }
 
-                let fadeInAnimation = Shimmer.fadeAnimation(layer: maskLayer.fadeLayer, opacity: 1.0,  duration: shimmerEndFadeDuration)
+                let fadeInAnimation = Shimmer.fadeAnimation(
+                    layer: maskLayer.fadeLayer,
+                    opacity: 1.0,
+                    duration: shimmerEndFadeDuration)
                 fadeInAnimation.delegate = self
-                fadeInAnimation.setValue(true, forKey: Shimmer.endFadeAnimationKey)
+                fadeInAnimation.setValue(true, forKey: Shimmer.Key.endFadeAnimation)
                 fadeInAnimation.beginTime = slideEndTime
-                maskLayer.fadeLayer.add(fadeInAnimation, forKey: Shimmer.fadeAnimationKey)
+                maskLayer.fadeLayer.add(fadeInAnimation, forKey: Shimmer.Key.fadeAnimation)
                 shimmerFadeTime = slideEndTime
             }
         } else {
             var fadeOutAnimation: CABasicAnimation?
             if shimmerBeginFadeDuration > 0.0 && disableActions == false {
-                let fadeOut = Shimmer.fadeAnimation(layer: maskLayer.fadeLayer, opacity: 0.0, duration: shimmerBeginFadeDuration)
+                let fadeOut = Shimmer.fadeAnimation(
+                    layer: maskLayer.fadeLayer,
+                    opacity: 0.0,
+                    duration: shimmerBeginFadeDuration)
                 fadeOutAnimation = fadeOut
-                maskLayer.fadeLayer.add(fadeOut, forKey: Shimmer.fadeAnimationKey)
+                maskLayer.fadeLayer.add(fadeOut, forKey: Shimmer.Key.fadeAnimation)
             } else {
                 let innerDisableActions = CATransaction.disableActions()
                 CATransaction.setDisableActions(true)
@@ -229,9 +252,12 @@ final class ShimmeringLayer: CALayer {
             }
 
             let animationDuration: CFTimeInterval = Double((length / shimmerSpeed)) + shimmerPauseDuration
-            if let slideAnimation = maskLayer.animation(forKey: Shimmer.slideAnimationKey) {
-                let repeatAnimation = Shimmer.slideRepeat(animation: slideAnimation, duration: animationDuration, direction: shimmerDirection)
-                maskLayer.add(repeatAnimation, forKey: Shimmer.slideAnimationKey)
+            if let slideAnimation = maskLayer.animation(forKey: Shimmer.Key.slideAnimation) {
+                let repeatAnimation = Shimmer.slideRepeat(
+                    animation: slideAnimation,
+                    duration: animationDuration,
+                    direction: shimmerDirection)
+                maskLayer.add(repeatAnimation, forKey: Shimmer.Key.slideAnimation)
             } else {
                 let slideAnimation = Shimmer.slideAnimation(duration: animationDuration, direction: shimmerDirection)
                 slideAnimation.fillMode = .forwards
@@ -240,28 +266,28 @@ final class ShimmeringLayer: CALayer {
                     shimmerBeginTime = CACurrentMediaTime() + (fadeOutAnimation?.duration ?? 0)
                 }
                 slideAnimation.beginTime = shimmerBeginTime
-                maskLayer.add(slideAnimation, forKey: Shimmer.slideAnimationKey)
+                maskLayer.add(slideAnimation, forKey: Shimmer.Key.slideAnimation)
             }
         }
 
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
 }
 
 extension ShimmeringLayer: CALayerDelegate {
-    func action(for layer: CALayer, forKey event: String) -> CAAction? {
+    private func action(for layer: CALayer, forKey event: String) -> CAAction? {
         return nil
     }
 }
 
 extension ShimmeringLayer: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if flag == true && anim.value(forKey: Shimmer.endFadeAnimationKey) as? Bool == true {
-            maskLayer?.fadeLayer.removeAnimation(forKey: Shimmer.fadeAnimationKey)
+    private func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag == true && anim.value(forKey: Shimmer.Key.endFadeAnimation) as? Bool == true {
+            maskLayer?.fadeLayer.removeAnimation(forKey: Shimmer.Key.fadeAnimation)
             clearMask()
         }
     }

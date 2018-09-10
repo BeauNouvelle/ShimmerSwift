@@ -32,14 +32,14 @@
 import Foundation
 import UIKit
 
-final class ShimmeringView: UIView {
+final public class ShimmeringView: UIView {
 
-    override class var layerClass: Swift.AnyClass {
+    override public class var layerClass: Swift.AnyClass {
         return ShimmeringLayer.self
     }
 
     /// The content view to be shimmered
-    var contentView = UIView() {
+    public var contentView = UIView() {
         didSet {
             if oldValue != contentView {
                 addSubview(contentView)
@@ -64,12 +64,14 @@ final class ShimmeringView: UIView {
         didSet { shimmerLayer?.shimmerHighlightLength = shimmerHighlightLength }
     }
 
-    /// The direction of the shimmer animation. Detaults to `.right`.
+    /// The direction of the shimmer animation.
+    /// Defaults to `.right`, which will run the animation from left to right.
     public var shimmerDirection: Shimmer.Direction = .right {
         didSet { shimmerLayer?.updateShimmering() }
     }
 
-    /// The time interval between shimmers in seconds. Defaults to 0.4.
+    /// The time interval between shimmers in seconds.
+    /// Defaults to 0.4.
     public var shimmerPauseDuration: CFTimeInterval = 0.4 {
         didSet  { shimmerLayer?.shimmerPauseDuration = shimmerPauseDuration }
     }
@@ -94,28 +96,28 @@ final class ShimmeringView: UIView {
         didSet { shimmerLayer?.shimmerBeginFadeDuration = shimmerBeginFadeDuration }
     }
 
-    /// The duration of the fade used when the shiimer ends. Defaults to 0.3.
+    /// The duration of the fade used when the shimmer ends. Defaults to 0.3.
     public var shimmerEndFadeDuration: CFTimeInterval = 0.3 {
         didSet { shimmerLayer?.shimmerEndFadeDuration = shimmerEndFadeDuration }
     }
 
-    /// The absolute CoreAnimation media time when teh shimmer will fade in.
+    /// The absolute CoreAnimation media time when the shimmer will fade in.
     public var shimmerFadeTime: CFTimeInterval? {
         didSet { shimmerLayer?.shimmerFadeTime = shimmerFadeTime }
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         contentView.bounds = self.bounds
         contentView.center = self.center
         super.layoutSubviews()
     }
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
     private var shimmerLayer: ShimmeringLayer? {

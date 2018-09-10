@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ShimmerSwift
 
 class ViewController: UIViewController {
 
