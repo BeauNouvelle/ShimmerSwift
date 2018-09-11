@@ -3,6 +3,10 @@ A swift implementation of Facebooks shimmer effect.
 
 ![demo](demo.gif)
 
+## Requirements
+- Swift 4.2
+- iOS 10+
+
 ## Installation
 
 #### Carthage

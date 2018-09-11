@@ -260,7 +260,7 @@ final public class ShimmeringLayer: CALayer {
                 maskLayer.add(repeatAnimation, forKey: Shimmer.Key.slideAnimation)
             } else {
                 let slideAnimation = Shimmer.slideAnimation(duration: animationDuration, direction: shimmerDirection)
-                slideAnimation.fillMode = CAMediaTimingFillMode.forwards
+                slideAnimation.fillMode = .forwards
                 slideAnimation.isRemovedOnCompletion = false
                 if shimmerBeginTime == shimmerDefaultBeginTime {
                     shimmerBeginTime = CACurrentMediaTime() + (fadeOutAnimation?.duration ?? 0)
