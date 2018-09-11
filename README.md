@@ -9,6 +9,9 @@ A swift implementation of Facebooks shimmer effect.
 
 ## Installation
 
+#### Cocoapods
+Add  `pod 'ShimmerSwift'` to your Podfile.
+
 #### Carthage
 Add `github "BeauNouvelle/ShimmerSwift"` to your Cartfile.
 
