@@ -52,7 +52,7 @@ final public class Shimmer {
         let animation = CABasicAnimation(keyPath: "opacity")
         animation.fromValue = layer.presentation()?.opacity
         animation.toValue = opacity
-        animation.fillMode = .both
+        animation.fillMode = CAMediaTimingFillMode.both
         animation.isRemovedOnCompletion = false
         animation.duration = duration
         return animation
