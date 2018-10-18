@@ -3,11 +3,11 @@ A swift implementation of Facebooks shimmer effect.
 
 ![demo](demo.gif)
 
-## Requirements
+## ✅ Requirements
 - Swift 4.2
 - iOS 10+
 
-## Installation
+## 👨‍💻 Installation
 
 #### Cocoapods
 Add  `pod 'ShimmerSwift'` to your Podfile.
@@ -18,7 +18,7 @@ Add `github "BeauNouvelle/ShimmerSwift"` to your Cartfile.
 #### Manual
 Download the .zip from this repo and drag the Shimmer folder into your project.
 
-## Useage
+## 👩‍🍳 Useage
 Shimmer is super easy to get started with. 
 
 Simply create a `ShimmeringView` or `ShimmeringLayer` and add your content.
@@ -40,7 +40,7 @@ Simply create a `ShimmeringView` or `ShimmeringLayer` and add your content.
     // To stop shimmering.
     shimmerView.isShimmering = false
 
-### Customization
+### 👩‍🎨 Customization
 All customizable properties are well documented in code, and are reproduced below.
 
 ----
