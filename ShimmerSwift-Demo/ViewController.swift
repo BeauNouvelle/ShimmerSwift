@@ -11,14 +11,14 @@ import ShimmerSwift
 
 class ViewController: UIViewController {
 
+    let shimmerView = ShimmeringView(frame: CGRect(x: 0, y: 0, width: 400, height: 200))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         setupSubviews()
     }
 
     func setupSubviews() {
-        let shimmerView = ShimmeringView(frame: self.view.bounds)
         self.view.addSubview(shimmerView)
 
         let label = UILabel(frame: shimmerView.bounds)
@@ -30,6 +30,16 @@ class ViewController: UIViewController {
         shimmerView.isShimmering = true
         shimmerView.shimmerSpeed = 400
         shimmerView.shimmerPauseDuration = 0.0
+
+        let startStopButton = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 100))
+        startStopButton.addTarget(self, action: #selector(tappedStartStopButton), for: .touchUpInside)
+        startStopButton.setTitle("Start/Stop Shimmer", for: .normal)
+        startStopButton.setTitleColor(.black, for: .normal)
+        view.addSubview(startStopButton)
+    }
+
+    @objc func tappedStartStopButton() {
+        shimmerView.isShimmering = !shimmerView.isShimmering
     }
 
 }

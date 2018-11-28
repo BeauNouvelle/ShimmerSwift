@@ -196,7 +196,7 @@ final public class ShimmeringLayer: CALayer {
 
     func updateShimmering() {
         createMaskIfNeeded()
-        guard let maskLayer = maskLayer, isShimmering == true else { return }
+        guard let maskLayer = maskLayer else { return }
         layoutIfNeeded()
 
         let disableActions = CATransaction.disableActions()
