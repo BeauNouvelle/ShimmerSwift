@@ -5,7 +5,7 @@ A swift implementation of Facebooks shimmer effect.
 
 ## ✅ Requirements
 - Swift 4.2
-- iOS 10+
+- iOS 9.0+
 
 ## 👨‍💻 Installation
 
