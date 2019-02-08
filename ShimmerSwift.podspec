@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShimmerSwift"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "A swift implementation of Facebooks shimmer effect."
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "9.0"
 
   s.homepage     = "https://github.com/BeauNouvelle/ShimmerSwift"
 
