@@ -22,8 +22,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/BeauNouvelle/ShimmerSwift"
 
-  s.license      = { :type => "Unlicense", :file => "LICENSE" }1.1.0
-
+  s.license      = { :type => "Unlicense", :file => "LICENSE" }
 
   s.author    = "Beau Nouvelle"
   s.social_media_url   = "http://twitter.com/BeauNouvelle"
