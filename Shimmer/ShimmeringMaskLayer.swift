@@ -47,6 +47,14 @@ final class ShimmeringMaskLayer: CAGradientLayer {
         super.init(coder: aDecoder)
     }
 
+    override init(layer: Any) {
+
+        if let layer = layer as? ShimmeringMaskLayer {
+            layer.fadeLayer.backgroundColor = UIColor.white.cgColor
+        }
+
+        super.init(layer: layer)
+    }
     override func layoutSublayers() {
         super.layoutSublayers()
         let rect = bounds

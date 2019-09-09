@@ -276,6 +276,9 @@ final public class ShimmeringLayer: CALayer {
         super.init(coder: aDecoder)
     }
 
+    override public init(layer: Any) {
+        super.init(layer: layer)
+    }
 }
 
 extension ShimmeringLayer: CALayerDelegate {
