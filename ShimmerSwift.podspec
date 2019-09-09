@@ -16,13 +16,14 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShimmerSwift"
-  s.version      = "1.0.3"
+  s.version      = "1.1.0"
   s.summary      = "A swift implementation of Facebooks shimmer effect."
   s.platform     = :ios, "10.0"
 
   s.homepage     = "https://github.com/BeauNouvelle/ShimmerSwift"
 
-  s.license      = { :type => "Unlicense", :file => "LICENSE" }
+  s.license      = { :type => "Unlicense", :file => "LICENSE" }1.1.0
+
 
   s.author    = "Beau Nouvelle"
   s.social_media_url   = "http://twitter.com/BeauNouvelle"
@@ -33,6 +34,6 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "Shimmer/*.{swift}"
   s.exclude_files = "Classes/Exclude"
 
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 
 end

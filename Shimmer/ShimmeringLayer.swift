@@ -282,13 +282,13 @@ final public class ShimmeringLayer: CALayer {
 }
 
 extension ShimmeringLayer: CALayerDelegate {
-    private func action(for layer: CALayer, forKey event: String) -> CAAction? {
+    public func action(for layer: CALayer, forKey event: String) -> CAAction? {
         return nil
     }
 }
 
 extension ShimmeringLayer: CAAnimationDelegate {
-    private func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag == true && anim.value(forKey: Shimmer.Key.endFadeAnimation) as? Bool == true {
             maskLayer?.fadeLayer.removeAnimation(forKey: Shimmer.Key.fadeAnimation)
             clearMask()
