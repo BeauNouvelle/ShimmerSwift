@@ -18,8 +18,6 @@ Add `github "BeauNouvelle/ShimmerSwift"` to your Cartfile.
 #### Cocoapods
 Add  `pod 'ShimmerSwift'` to your Podfile.
 
-> Cocoapods will no longer be supported beyond 2.0.0.
-
 ## 👩‍🍳 Useage
 Shimmer is super easy to get started with. 
 
