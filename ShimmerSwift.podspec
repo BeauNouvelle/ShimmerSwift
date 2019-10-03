@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShimmerSwift"
-  s.version      = "1.1.0"
+  s.version      = "2.1.0"
   s.summary      = "A swift implementation of Facebooks shimmer effect."
   s.platform     = :ios, "10.0"
 
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "Shimmer/*.{swift}"
   s.exclude_files = "Classes/Exclude"
 
-  s.swift_version = "5.0"
+  s.swift_version = "5.1"
 
 end
