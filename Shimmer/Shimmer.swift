@@ -31,6 +31,7 @@
 
 import Foundation
 import QuartzCore
+#if canImport(UIKit)
 import UIKit
 
 final public class Shimmer {
@@ -84,4 +85,4 @@ final public class Shimmer {
     }
 
 }
-
+#endif
