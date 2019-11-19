@@ -18,6 +18,9 @@ Add `github "BeauNouvelle/ShimmerSwift"` to your Cartfile.
 #### Cocoapods
 Add  `pod 'ShimmerSwift'` to your Podfile.
 
+#### SPM
+In Xcode 11 you can add packages by going to `File > Swift Packages > Add Package Dependency`. Copy in this repos URL and go from there.
+
 ## 👩‍🍳 Useage
 Shimmer is super easy to get started with. 
 
