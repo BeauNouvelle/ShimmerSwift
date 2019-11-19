@@ -31,6 +31,7 @@
 
 import Foundation
 import QuartzCore
+#if canImport(UIKit)
 import UIKit
 
 final class ShimmeringMaskLayer: CAGradientLayer {
@@ -62,3 +63,4 @@ final class ShimmeringMaskLayer: CAGradientLayer {
         fadeLayer.position = CGPoint(x: rect.midX, y: rect.midY)
     }
 }
+#endif

@@ -30,6 +30,7 @@
 //  For more information, please refer to <http://unlicense.org/>
 
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 final public class ShimmeringView: UIView {
@@ -125,4 +126,4 @@ final public class ShimmeringView: UIView {
     }
 
 }
-
+#endif

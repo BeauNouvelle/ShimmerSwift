@@ -32,6 +32,7 @@
 
 import Foundation
 import QuartzCore
+#if canImport(UIKit)
 import UIKit
 
 final public class ShimmeringLayer: CALayer {
@@ -295,3 +296,5 @@ extension ShimmeringLayer: CAAnimationDelegate {
         }
     }
 }
+
+#endif
