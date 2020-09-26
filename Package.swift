@@ -5,7 +5,8 @@ import PackageDescription
 let package = Package(
     name: "ShimmerSwift",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v10),
+        .tvOS(.v10),
     ],
     products: [
         .library(name: "ShimmerSwift", targets: ["ShimmerSwift"]),
@@ -13,8 +14,6 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        // SwiftChart
-        .target(name: "ShimmerSwift", dependencies: [
-        ], path: "Shimmer"),
+        .target(name: "ShimmerSwift", path: "Shimmer"),
     ]
 )
