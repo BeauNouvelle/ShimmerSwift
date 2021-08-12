@@ -3,6 +3,10 @@ A swift implementation of Facebooks shimmer effect.
 
 ![demo](demo.gif)
 
+> This project is no longer under active development. 
+> It's stable and should still be good to use for a number of years.
+> I'm moving my efforts into SwiftUI.
+
 ## ✅ Requirements
 - Swift 5.1+
 - iOS 9.0+
